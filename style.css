@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* disabled hand setting so that js can set the props */
+    /* --tileSize: 30px;
+    --boardSize: 10; */
+    --inputWidth: 100px;
+    --inputHeight: 60px;
+    --inputBorderColorIdle: rgb(45, 229, 100);
+    --inputBorderColor: rgb(25, 126, 250);
+    --hiddenColor: rgb(147, 147, 177);
+    --openedColor: rgb(87, 207, 85);
+    --markedColor: rgb(249, 167, 62);
+    --mineColor: rgb(237, 102, 102);
+    box-sizing: border-box;
+
+
+
+
+
+    font-family: 'Mouse Memoirs', sans-serif;
+    word-spacing: 0.5em;
+    letter-spacing: 0.3em;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: rgb(163, 158, 241);
+    background: -moz-linear-gradient(90deg, rgba(163, 158, 241, 1) 0%, rgba(126, 126, 235, 1) 26%, rgba(80, 174, 193, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(163, 158, 241, 1) 0%, rgba(126, 126, 235, 1) 26%, rgba(80, 174, 193, 1) 100%);
+    background: linear-gradient(90deg, rgba(163, 158, 241, 1) 0%, rgba(126, 126, 235, 1) 26%, rgba(80, 174, 193, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a39ef1", endColorstr="#50aec1", GradientType=1);
+    width: 100vw;
+}
+
+
+.board {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    display: grid;
+    grid-template-columns: repeat(var(--boardSize), var(--tileSize));
+    grid-template-rows: repeat(var(--boardSize), var(--tileSize));
+    gap: 0.5rem;
+}
+
+.tile {
+    /* color: transparent; */
+    line-height: var(--tileSize);
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.tile[data-status='hidden'] {
+    background-color: var(--hiddenColor);
+}
+
+.tile[data-status='opened'] {
+    background-color: var(--openedColor);
+
+    color: white;
+    font-size: 2rem;
+}
+
+.tile[data-status='marked'] {
+    background-color: var(--markedColor);
+}
+
+.tile[data-status='mine'] {
+    background-color: var(--mineColor);
+    color: black;
+}
+
+.title,
+.mines-left {
+    text-align: center;
+}
+
+.modal-endgame {
+    display: none;
+    background-color: #fdfbe9;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.modal-endgame a {
+    text-decoration: none;
+    color: var(--markedColor);
+}
+
+.modal-endgame.show {
+    display: block;
+}
+
+
+.settings {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.settings-gear {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+#gameSettings {
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 2em;
+    text-align: left;
+    transition: opacity 0.3s ease-in-out;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.2em;
+    position: absolute;
+    opacity: 1;
+
+}
+
+#gameSettings.hidden {
+    opacity: 0;
+}
+
+#gameSettings label {
+    font-size: 2em;
+}
+
+#minesLeftInput,
+#boardSizeInput {
+    width: var(--inputWidth);
+    height: var(--inputHeight);
+    line-height: var(--inputHeight);
+    font-size: calc(var(--inputHeight)*0.7);
+    border-radius: 5px;
+    border: none;
+    outline: 2px solid var(--inputBorderColorIdle);
+    text-align: center;
+    text-indent: 0.5em;
+}
+
+#minesLeftInput:focus,
+#boardSizeInput:focus {
+    outline: 2px solid var(--inputBorderColor);
+}
+
+#tileSizeInput {
+    width: 300px;
+}
