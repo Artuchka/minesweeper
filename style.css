@@ -82,14 +82,13 @@ body {
 .modal-endgame {
     display: none;
     background-color: #fdfbe9;
-    width: 400px;
-    height: 200px;
+    width: 350px;
+    height: 100px;
     text-align: center;
-    line-height: 100px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    translate: 0 -50%;
+    right: 3rem;
 }
 
 .modal-endgame a {
@@ -98,7 +97,12 @@ body {
 }
 
 .modal-endgame.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
