@@ -130,11 +130,12 @@ body {
     border-radius: 0.2em;
     position: absolute;
     opacity: 1;
-
+    pointer-events: initial;
 }
 
 #gameSettings.hidden {
     opacity: 0;
+    pointer-events: none;
 }
 
 #gameSettings label {
