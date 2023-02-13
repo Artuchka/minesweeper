@@ -1,10 +1,5 @@
-# ZOZO marketplace
-
->📛[OZON](https://www.ozon.ru/) - Russian famous marketplace, which has simple design, inspired me to recreate its' main functionality 
-
+# Minwesweeper
 >### 🔗[Live Demo](https://artuchka.github.io/minesweeper/)
-
-&nbsp;&nbsp;Here are Frontend files, but look through [Backend](https://github.com/Artuchka/ozon-server) part if you're interested 
 
 >📚About the Project:
 
