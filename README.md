@@ -5,6 +5,7 @@
 
 In this small but pretty project I've impemented Functional Programming paradigma
 Separated all Minesweeper logic from DOM changing logic 
+Feel free to change board dimensions, tile size and amount of mines to diversify complexity
 
 >🧰Technologies Used: 
 - CSS3
@@ -26,6 +27,7 @@ npm run dev
 
 
 >📷Screenshots:
+
 ![image](https://user-images.githubusercontent.com/42734308/218519822-29ebce8c-dc8c-4368-abce-bb9dae561893.png)
 ![image](https://user-images.githubusercontent.com/42734308/218519877-3335f0b0-5e9f-4786-92ae-a4736395eb5c.png)
 
