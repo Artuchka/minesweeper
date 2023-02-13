@@ -3,8 +3,8 @@
 
 >📚About the Project:
 
-In this small but pretty project I've impemented Functional Programming paradigma
-Separated all Minesweeper logic from DOM changing logic 
+In this small but pretty project I've impemented Functional Programming paradigma\
+Separated all Minesweeper logic from DOM changing logic \
 Feel free to change board dimensions, tile size and amount of mines to diversify complexity
 
 >🧰Technologies Used: 
